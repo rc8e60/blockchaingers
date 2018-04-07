@@ -5,3 +5,4 @@ languages:
 exclude:
 - /config/.*
 - /resources/lang/.*
+- /database/.*
