@@ -43,4 +43,25 @@ class CompanyResource extends KvkResource
 
         return json_decode($body);
     }
+
+    /**
+     * Find a company by its ID.
+     *
+     * @param  int  $id
+     * @return stdClass
+     */
+    public function findById(int $id)
+    {
+        try {
+            $response = $this->client->get(
+                $this->api . '/by-kvknumber/' . $id
+            );
+        } catch (ClientException $e) {
+            throw new ResourceClientException($this);
+        }
+
+        $body = $response->getBody();
+
+        return json_decode($body);
+    }
 }
