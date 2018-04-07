@@ -2,6 +2,7 @@
 
 namespace App\Resources\Kvk;
 
+use GuzzleHttp\Exception\ClientException;
 use App\Exceptions\ResourceClientException;
 
 class CompanyResource extends KvkResource
@@ -27,7 +28,7 @@ class CompanyResource extends KvkResource
      * Find a company by its trade name.
      *
      * @param  string  $name
-     * @return stdClass
+     * @return \stdClass
      */
     public function findByTradeName(string $name)
     {
@@ -48,7 +49,7 @@ class CompanyResource extends KvkResource
      * Find a company by its ID.
      *
      * @param  int  $id
-     * @return stdClass
+     * @return \stdClass
      */
     public function findById(int $id)
     {

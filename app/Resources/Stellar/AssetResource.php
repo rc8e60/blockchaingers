@@ -30,7 +30,7 @@ class AssetResource extends StellarResource
      * Create a new Stellar asset.
      *
      * @param  \App\Corporation  $corporation
-     * @return stdClass
+     * @return \stdClass
      */
     public function create(Corporation $corporation)
     {
@@ -55,7 +55,7 @@ class AssetResource extends StellarResource
      *
      * @param  \App\Corporation  $corporation
      * @param  \App\User  $user
-     * @return stdClass
+     * @return \stdClass
      */
     public function trust(
         Corporation $corporation,

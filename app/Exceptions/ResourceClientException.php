@@ -32,12 +32,10 @@ class ResourceClientException extends Exception
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function render(
-        $request
-    ) {
+    public function render()
+    {
         return response()->json([
             'form' => 'Something went wrong at our ' . strtolower($this->resource) . ' resource.',
         ], 400);
