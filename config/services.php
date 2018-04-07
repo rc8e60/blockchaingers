@@ -40,4 +40,9 @@ return [
         'apiKey' => env('KVK_API_KEY'),
     ],
 
+    'stellar' => [
+        'apiUri' => env('STELLAR_API_URI'),
+        'apiKey' => env('STELLAR_API_KEY'),
+    ],
+
 ];
