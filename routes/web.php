@@ -15,6 +15,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('corporation', 'CorporationController', ['only' => [
-    'create', 'store', 'show', 'destroy',
-]]);
+Route::middleware('auth')->group(function () {
+    Route::resource('corporation', 'CorporationController', ['only' => [
+        'create', 'store', 'show', 'destroy',
+    ]]);
+});
