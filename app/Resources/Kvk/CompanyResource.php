@@ -14,7 +14,7 @@ class CompanyResource extends KvkResource
     private $api;
 
     /**
-     * Create a new Kvk company resource instance.
+     * Create a new KvK company resource instance.
      */
     public function __construct()
     {
