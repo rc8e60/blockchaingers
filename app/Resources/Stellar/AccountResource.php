@@ -27,7 +27,7 @@ class AccountResource extends StellarResource
     /**
      * Create a new Stellar account.
      *
-     * @return stdClass
+     * @return \stdClass
      */
     public function create()
     {

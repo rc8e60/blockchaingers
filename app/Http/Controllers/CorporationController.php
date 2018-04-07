@@ -11,7 +11,7 @@ class CorporationController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function create()
     {
@@ -23,7 +23,7 @@ class CorporationController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Resources\Stellar\AccountResource  $resource
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(
         Request $request,
@@ -56,7 +56,7 @@ class CorporationController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Corporation  $corporation
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function show(Corporation $corporation)
     {
@@ -69,7 +69,7 @@ class CorporationController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Corporation  $corporation
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Corporation $corporation)
     {
