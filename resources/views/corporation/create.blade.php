@@ -20,8 +20,8 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                {{ Form::label('name', 'DoD (definition of done)') }}
-                                {!! Form::textarea('name', null, ['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Describe your DoD (definition of done)']) !!}
+                                {{ Form::label('definition_of_done', 'DoD (definition of done)') }}
+                                {!! Form::textarea('definition_of_done', null, ['class' => 'form-control', 'rows' => 5, 'placeholder' => 'Describe your DoD (definition of done)']) !!}
                                 </div>
                             </div>
                         </div>
