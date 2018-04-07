@@ -29,7 +29,7 @@ class CompanyController extends Controller
      * Display the specified resource.
      *
      * @param  mixed  $query
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show($query)
     {
