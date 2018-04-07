@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::resource('corporation', 'CorporationController', ['only' => [
-        'create', 'store', 'show', 'destroy',
+        'create', 'store', 'show', 'destroy', 'join',
     ]]);
+
+    Route::get('/corporation/{corporation}/join', 'CorporationController@join');
 });
