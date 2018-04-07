@@ -1,3 +1,6 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/gl/Foryard/foryard/blockchaingers/badges/quality-score.png?b=develop&s=c2c4d7c1a16f2b24312f109f782ec9c43943b38e)](https://scrutinizer-ci.com/gl/Foryard/foryard/blockchaingers/?branch=develop)
+[![Build Status](https://scrutinizer-ci.com/gl/Foryard/foryard/blockchaingers/badges/build.png?b=develop&s=b3815f57aed9967a60412827f0012e6223a7c9de)](https://scrutinizer-ci.com/gl/Foryard/foryard/blockchaingers/build-status/develop)
+
 ## Requirements
 
 - PHP >= 7.0.0
