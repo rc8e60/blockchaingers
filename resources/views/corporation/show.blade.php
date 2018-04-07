@@ -3,12 +3,21 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <h1>{{ ucfirst($corporation->name) }} corporation</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @if (session('status'))
+                <div class="alert alert-success">{{ session('status') }}</div>
+            @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    {{ ucfirst($corporation->name) }} corporation
-                    <span class="pull-right text-muted">
-                        Participants
+                    Participants
+                    <span class="pull-right text-muted badge">
+                        {{ count($corporation->users) }}
                     </span>
                 </div>
                 <div class="table-responsive">
@@ -36,6 +45,22 @@
                             @endforelse
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Definition of done
+                    <span class="pull-right text-muted">
+                        When are you done?
+                    </span>
+                </div>
+                <div class="panel-body">
+                    @if (!$corporation->definition_of_done)
+                        <div class="text-warning">Sorry, but you have chosen not to have a DoD (definition of done).</div>
+                    @endif
+                    {{ $corporation->definition_of_done }}
                 </div>
             </div>
         </div>
