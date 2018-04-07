@@ -43,7 +43,7 @@ class CorporationController extends Controller
     public function show(Corporation $corporation)
     {
         return view('corporation.show', [
-            'corporation' => $corporation,
+            'corporation' => $corporation->load('users'),
         ]);
     }
 
