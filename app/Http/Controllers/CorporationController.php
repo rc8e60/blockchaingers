@@ -94,7 +94,7 @@ class CorporationController extends Controller
             'CorporationController@show',
             $corporation
         )->with([
-            'status' => 'Yeah! You\'re part of this corporation.',
+            'status' => 'You are now a part of this corporation.',
         ]);
     }
 }
