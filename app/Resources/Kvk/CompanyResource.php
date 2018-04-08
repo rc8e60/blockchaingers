@@ -65,4 +65,26 @@ class CompanyResource extends KvkResource
 
         return json_decode($body);
     }
+
+    /**
+     * Get a sample.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function sample()
+    {
+        try {
+            $response = $this->client->get(
+                $this->api . '/sample'
+            );
+        } catch (ClientException $e) {
+            throw new ResourceClientException($this);
+        }
+
+        $body = $response->getBody();
+
+        $companies = json_decode($body)->companies;
+
+        return collect($companies);
+    }
 }

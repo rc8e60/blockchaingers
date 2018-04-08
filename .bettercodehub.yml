@@ -1,7 +1,8 @@
-component_depth: 1
+component_depth: 4
 languages:
 - php
 
 exclude:
 - /config/.*
 - /resources/lang/.*
+- /database/.*

@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+require('bootstrap-select');
+
 const ClipboardJS = require('clipboard');
 
 const clipboard = new ClipboardJS('.invitation-link');

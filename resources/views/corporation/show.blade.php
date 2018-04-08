@@ -27,6 +27,7 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email address</th>
                                 <th scope="col">User since</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,11 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ \Carbon\Carbon::parse($user->created_at)->format('Y-m-d H:i:s') }}</td>
+                                    <td>
+                                        <a href="http://testnet.stellarchain.io/address/{{ $user->account_address }}">
+                                            <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+                                        </a>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
