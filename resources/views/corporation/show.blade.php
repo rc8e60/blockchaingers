@@ -151,5 +151,27 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Invitation link
+                    <span class="pull-right text-muted">
+                        Invite your participants
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-10">
+                        <input id="link" value="{{ action('CorporationController@join', $corporation->id) }}" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="invitation-link btn btn-success" data-clipboard-target="#link">
+                            <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
