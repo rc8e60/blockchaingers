@@ -1,11 +1,22 @@
+/*
+ * Modules and generic styles
+ */
+@import "partials/base";
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import "node_modules/font-awesome/scss/font-awesome";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+/*
+ * Partials
+ */
+@import "partials/header";
+@import "partials/menu";
+@import "partials/panels";
+@import "partials/table";
+@import "partials/buttons";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~bootstrap-select/sass/bootstrap-select";

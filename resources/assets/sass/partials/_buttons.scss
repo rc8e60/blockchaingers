@@ -1,0 +1,30 @@
+.btn-white {
+    @extend .btn-default;
+
+    background-color: white;
+    color: $blue;
+    box-shadow: none;
+    border: none;
+    opacity: 0.6;
+    font-size: 15px;
+    @include border-radius(8px);
+}
+
+.btn-bordered {
+    @extend .btn-default;
+
+    background-color: transparent;
+    border: 1px solid $blue;
+    box-shadow: none;
+    color: $blue;
+    @include border-radius(8px);
+    margin-top: -6px;
+
+    .fa-user-plus {
+        margin-right: 10px;
+    }
+}
+
+.text-blue {
+    color: $blue;
+}

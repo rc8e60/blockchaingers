@@ -1,0 +1,26 @@
+@mixin generate($class, $classPrefix, $start, $end, $valueSuffix, $minWidth: null) {
+    @for $i from $start through $end {
+        @if $i % 5 == 0 {
+            @if $minWidth != null {
+                @media (min-width: #{$minWidth}#{$valueSuffix}) {
+                    .#{$classPrefix}-#{$i} {
+                        #{$class}: #{$i}#{$valueSuffix};
+                    }
+                }
+            } @else {
+                .#{$classPrefix}-#{$i} {
+                    #{$class}: #{$i}#{$valueSuffix};
+                }
+            }
+        }
+    }
+}
+
+@include generate('margin', 'margin', 0, 50, 'px');
+
+@include generate('margin-top', 'margin-top-xs', 0, 100, 'px');
+@include generate('margin-top', 'margin-top-sm', 0, 100, 'px', 768);
+@include generate('margin-top', 'margin-top-md', 0, 100, 'px', 992);
+@include generate('margin-top', 'margin-top-lg', 0, 100, 'px', 1200);
+
+@include generate('margin-bottom', 'margin-bottom', 0, 100, 'px');

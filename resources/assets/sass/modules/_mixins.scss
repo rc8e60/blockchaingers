@@ -1,0 +1,100 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin border-top-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-top-right-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin box-shadow($arguments) {
+  -webkit-box-shadow: #{$arguments};
+     -moz-box-shadow: #{$arguments};
+          box-shadow: #{$arguments};
+}
+
+@mixin placeholder-font-style($style) {
+    &::-webkit-input-placeholder {
+        font-style: $style;
+    }
+
+    &:-ms-input-placeholder {
+        font-style: $style;
+    }
+
+    &:-moz-placeholder {
+        font-style: $style;
+    }
+
+    &::-moz-placeholder {
+        font-style: $style;
+    }
+}
+
+@mixin position($type, $top:null, $right:null, $bottom:null, $left:null) {
+    position: $type;
+    @if (top)    { top:    $top;    }
+    @if (right)  { right:  $right;  }
+    @if (bottom) { bottom: $bottom; }
+    @if (left)   { left:   $left;   }
+}
+
+@mixin transform($arguments) {
+    -webkit-transform: #{$arguments};
+       -moz-transform: #{$arguments};
+            transform: #{$arguments};
+}
+
+@mixin transform-origin($arguments) {
+    -webkit-transform-origin: #{$arguments};
+       -moz-transform-origin: #{$arguments};
+            transform-origin: #{$arguments};
+}
+
+@mixin appearance($value) {
+    -webkit-appearance: $value;
+       -moz-appearance: $value;
+            appearance: $value;
+}
+
+@mixin size($height, $width) {
+    height: $height;
+     width: $width;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation($arguments) {
+  -webkit-animation: #{$arguments};
+     -moz-animation: #{$arguments};
+      -ms-animation: #{$arguments};
+       -o-animation: #{$arguments};
+          animation: #{$arguments};
+}
+
+@mixin color($bg, $color) {
+    background-color: $bg;
+               color: $color;
+}
