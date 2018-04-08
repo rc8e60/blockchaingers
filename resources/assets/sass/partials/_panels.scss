@@ -1,0 +1,27 @@
+.panel {
+    .panel-heading {
+        padding: 20px 0px 20px 0px;
+
+        .panel-title {
+            font-size: 20px;
+
+            .fa-angle-up {
+                font-size: 30px;
+                padding-right: 20px;
+                vertical-align: -3px;
+            }
+        }
+
+        .participants-count {
+            line-height: 33px;
+        }
+    }
+
+    .panel-footer {
+        padding: 20px 15px;
+    }
+}
+
+.panel-padding {
+    padding: 0px 15px 0px 15px;
+}
