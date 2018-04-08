@@ -1,3 +1,5 @@
+@inject('resource', 'App\Resources\Kvk\CompanyResource')
+
 @extends('layouts.app')
 
 @section('content')
@@ -69,6 +71,21 @@
 
                                     <div class="col-md-6">
                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company" class="col-md-4 control-label">Company</label>
+
+                                    <div class="col-md-6">
+                                        {!! Form::select(
+                                            'company',
+                                            $resource->sample()->pluck('businessName', 'kvknummer'),
+                                            null,
+                                            [
+                                                'class' => 'selectpicker form-control',
+                                                'data-live-search' => 'true',
+                                            ]) !!}
                                     </div>
                                 </div>
 

@@ -7,16 +7,42 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+require('bootstrap-select');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+const ClipboardJS = require('clipboard');
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+const clipboard = new ClipboardJS('.invitation-link');
 
-const app = new Vue({
-    el: '#app'
+clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
 });
+
+clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+});
+
+$("#link").on("click", function () {
+    $(this).select();
+});
+
+// Tooltip
+$('[data-toggle="tooltip"]').tooltip();
+
+$('.invitation-link').tooltip({
+  trigger: 'click',
+  placement: 'bottom'
+});
+
+function setTooltip(message) {
+  $('.invitation-link').tooltip('hide')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+
+function hideTooltip() {
+  setTimeout(function() {
+    $('.invitation-link').tooltip('hide');
+  }, 1000);
+}

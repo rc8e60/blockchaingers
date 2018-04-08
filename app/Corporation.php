@@ -13,6 +13,7 @@ class Corporation extends Model
      */
     protected $fillable = [
         'name',
+        'definition_of_done',
     ];
 
     /**

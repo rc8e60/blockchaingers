@@ -77,4 +77,24 @@ class CorporationController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * Invite user from request to the specified corporation.
+     *
+     * @param  \App\Corporation  $corporation
+     * @return \Illuminate\Http\Response
+     */
+    public function join(
+        Corporation $corporation,
+        Request $request
+    ) {
+        $corporation->users()->syncWithoutDetaching($request->user());
+
+        return redirect()->action(
+            'CorporationController@show',
+            $corporation
+        )->with([
+            'status' => 'You are now a part of this corporation.',
+        ]);
+    }
 }
