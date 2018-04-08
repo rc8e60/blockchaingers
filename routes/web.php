@@ -19,4 +19,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('corporation', 'CorporationController', ['only' => [
         'create', 'store', 'show', 'destroy',
     ]]);
+
+    Route::get('/corporation/{corporation}/join', 'CorporationController@join');
 });

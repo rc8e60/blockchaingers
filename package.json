@@ -21,6 +21,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "clipboard": "^2.0.0",
         "bootstrap-select": "^1.12.4"
     }
 }
